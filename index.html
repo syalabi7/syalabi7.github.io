@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Undangan Pernikahan — Syalabi & Ayuna</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#b86b6b;
+      --accent-2:#6b8fb8;
+      --bg:#fff8f5;
+      --muted:#6a6a6a;
+      --card:rgba(255,255,255,0.7);
+      --glass:rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Arial;
+      background: linear-gradient(180deg, #fff 0%, #fff8f5 35%, #fffefc 100%);
+      color:#222; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      -webkit-text-size-adjust:100%;
+      padding:24px;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .container{
+      width:980px; max-width:96%; background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+      border-radius:16px; box-shadow:0 8px 30px rgba(16,24,40,0.12); overflow:hidden; display:grid; grid-template-columns:1fr 380px; gap:0;
+    }
+    .left{padding:40px 48px; background: linear-gradient(135deg, rgba(184,107,107,0.03), rgba(107,143,184,0.03));}
+    .right{background:linear-gradient(180deg,#fff,#fbfbff); padding:32px; display:flex; flex-direction:column; gap:16px; align-items:center; justify-content:center}
+    .names{font-family:'Playfair Display',serif; font-size:40px; letter-spacing:0.02em; color:var(--accent-2);}
+    .subtitle{font-size:15px; color:var(--muted); margin-top:6px}
+    .date-pill{margin-top:18px; display:inline-block; padding:10px 14px; border-radius:999px; background:var(--card); backdrop-filter: blur(6px); font-weight:600}
+    .quote{margin-top:22px; font-style:italic; color:#444;}
+    .section{margin-top:28px}
+
+    .details{display:flex; gap:18px; flex-wrap:wrap}
+    .detail-card{background:var(--glass); padding:14px; border-radius:10px; min-width:150px; box-shadow:0 4px 14px rgba(16,24,40,0.06)}
+    .detail-card h4{margin:0; font-size:13px; color:#333}
+    .detail-card p{margin:6px 0 0 0; font-size:14px; color:var(--muted)}
+
+    .btn{display:inline-block; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:600; cursor:pointer}
+    .btn-primary{background:var(--accent); color:#fff}
+    .btn-outline{border:1px solid var(--accent-2); color:var(--accent-2); background:transparent}
+
+    .rsvp-card{width:100%; padding:18px; border-radius:10px; background:linear-gradient(180deg,#ffffff,#fafafa); box-shadow:0 10px 30px rgba(16,24,40,0.05)}
+    label{display:block; margin:8px 0 6px; font-size:13px; color:#333}
+    input[type=text], input[type=email], textarea, select{width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6e6e6; font-size:14px}
+    textarea{min-height:90px}
+
+    .countdown{display:flex; gap:12px; margin-top:18px}
+    .count-item{background:var(--card); padding:12px 14px; border-radius:10px; min-width:64px; text-align:center}
+    .count-item strong{display:block; font-size:18px}
+    .count-item small{color:var(--muted)}
+
+    .footer{font-size:13px; color:var(--muted); margin-top:18px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr;}
+      .right{order:2}
+      .left{order:1}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <main class="left">
+      <div style="text-align:center">
+        <div style="font-size:12px; color:var(--muted);">Dengan memohon rahmat dan ridho Allah SWT</div>
+        <h1 class="names">Syalabi <span style="color:var(--accent);">&</span> Ayuna</h1>
+        <div class="subtitle">Kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami</div>
+        <div class="date-pill">Minggu, 4 Januari 2026</div>
+        <p class="quote">"Bersama membina keluarga kecil yang penuh cinta dan keberkahan"</p>
+      </div>
+
+      <section class="section">
+        <div class="details">
+          <div class="detail-card">
+            <h4>Akad</h4>
+            <p>Jam 09.00 WIB<br>Masjid Al-Ikhlas</p>
+          </div>
+          <div class="detail-card">
+            <h4>Resepsi</h4>
+            <p>Jam 11.00 - 14.00 WIB<br>Gedung Serbaguna Bunga</p>
+          </div>
+          <div class="detail-card">
+            <h4>Alamat</h4>
+            <p>Jalan Merpati No. 12, Nganjuk, Jawa Timur</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 style="margin:0; font-size:18px;">Detail</h3>
+        <p style="margin-top:8px; color:var(--muted)">Acara akan dimulai tepat waktu. Mohon konfirmasi kehadiran melalui form RSVP di sebelah kanan. Terima kasih atas doa dan kehadirannya.</p>
+      </section>
+
+      <div class="section">
+        <div class="countdown" aria-hidden="false">
+          <div class="count-item"><strong id="d">--</strong><small>Hari</small></div>
+          <div class="count-item"><strong id="h">--</strong><small>Jam</small></div>
+          <div class="count-item"><strong id="m">--</strong><small>Menit</small></div>
+          <div class="count-item"><strong id="s">--</strong><small>Detik</small></div>
+        </div>
+      </div>
+
+      <div class="section footer">
+        <div>Contact: <a href="tel:+6281234567890">+62 812-3456-7890 (Syalabi)</a> • <a href="tel:+6281987654321">+62 819-8765-4321 (Ayuna)</a></div>
+      </div>
+    </main>
+
+    <aside class="right">
+      <div style="width:100%; max-width:320px">
+        <div class="rsvp-card">
+          <h3 style="margin:0 0 8px 0">RSVP Kehadiran</h3>
+          <form id="rsvpForm">
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama" type="text" placeholder="Nama Anda" required>
+
+            <label for="email">Email (opsional)</label>
+            <input id="email" name="email" type="email" placeholder="email@domain.com">
+
+            <label for="kehadiran">Kehadiran</label>
+            <select id="kehadiran" name="kehadiran">
+              <option value="hadir">Hadir</option>
+              <option value="berhalangan">Berhalangan</option>
+            </select>
+
+            <label for="pesan">Pesan / Doa (opsional)</label>
+            <textarea id="pesan" name="pesan" placeholder="Doa atau pesan untuk kami..."></textarea>
+
+            <div style="display:flex; gap:8px; margin-top:12px">
+              <button type="submit" class="btn btn-primary">Kirim RSVP</button>
+              <button type="button" id="addCalendar" class="btn btn-outline">Tambah ke Kalender</button>
+            </div>
+            <p id="formMsg" style="margin-top:10px; color:green; display:none">Terima kasih! Konfirmasi Anda telah diterima.</p>
+          </form>
+        </div>
+
+        <div style="margin-top:12px; text-align:center">
+          <button id="openMap" class="btn btn-outline">Lihat Lokasi di Peta</button>
+        </div>
+
+        <div style="margin-top:18px; text-align:center; color:var(--muted); font-size:13px">
+          <div>Bagikan</div>
+          <div style="margin-top:8px; display:flex; gap:8px; justify-content:center">
+            <button onclick="share('whatsapp')" class="btn">WhatsApp</button>
+            <button onclick="share('copy')" class="btn">Salin Link</button>
+          </div>
+        </div>
+
+      </div>
+
+      <small style="color:var(--muted); margin-top:10px">Undangan digital — Syalabi & Ayuna • 4 Jan 2026</small>
+    </aside>
+  </div>
+
+  <script>
+    // Countdown to 4 January 2026 09:00 WIB (UTC+7)
+    const target = new Date('2026-01-04T02:00:00Z'); // 09:00 WIB = 02:00 UTC
+    function updateCountdown(){
+      const now = new Date();
+      let diff = Math.max(0, target - now);
+      const d = Math.floor(diff / (1000*60*60*24));
+      diff -= d * (1000*60*60*24);
+      const h = Math.floor(diff / (1000*60*60));
+      diff -= h * (1000*60*60);
+      const m = Math.floor(diff / (1000*60));
+      diff -= m * (1000*60);
+      const s = Math.floor(diff/1000);
+      document.getElementById('d').textContent = d;
+      document.getElementById('h').textContent = String(h).padStart(2,'0');
+      document.getElementById('m').textContent = String(m).padStart(2,'0');
+      document.getElementById('s').textContent = String(s).padStart(2,'0');
+    }
+    updateCountdown(); setInterval(updateCountdown,1000);
+
+    // Simple RSVP handler (local only)
+    const form = document.getElementById('rsvpForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = {
+        nama: form.nama.value.trim(),
+        email: form.email.value.trim(),
+        kehadiran: form.kehadiran.value,
+        pesan: form.pesan.value.trim(),
+        timestamp: new Date().toISOString()
+      };
+      // Simpan ke localStorage (sebagai contoh). Untuk deployment nyata -> kirim ke server.
+      const list = JSON.parse(localStorage.getItem('rsvp_list') || '[]');
+      list.push(data);
+      localStorage.setItem('rsvp_list', JSON.stringify(list));
+      document.getElementById('formMsg').style.display='block';
+      form.reset();
+    });
+
+    // Add event to calendar (iCal download)
+    document.getElementById('addCalendar').addEventListener('click', function(){
+      const title = encodeURIComponent('Pernikahan Syalabi & Ayuna');
+      const start = '20260104T020000Z'; // 2026-01-04 09:00 WIB in UTC
+      const end = '20260104T050000Z';   // example end time 12:00 WIB
+      const location = encodeURIComponent('Gedung Serbaguna Bunga, Jalan Merpati No.12, Nganjuk');
+      const details = encodeURIComponent('Undangan pernikahan Syalabi & Ayuna — semoga diberkahi.');
+      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nURL:${location}\nDTSTART:${start}\nDTEND:${end}\nSUMMARY:${title}\nDESCRIPTION:${details}\nLOCATION:${location}\nEND:VEVENT\nEND:VCALENDAR`;
+      const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'undangan-syalabi-ayuna.ics';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // Open map (Google Maps) - replace coordinates as needed
+    document.getElementById('openMap').addEventListener('click', function(){
+      const url = 'https://www.google.com/maps/search/?api=1&query=-7.5898,111.9192';
+      window.open(url, '_blank');
+    });
+
+    // Share / copy link
+    function share(type){
+      const url = location.href;
+      if(type==='whatsapp'){
+        const text = encodeURIComponent('Undangan Pernikahan Syalabi & Ayuna • 4 Jan 2026\n'+url);
+        window.open('https://api.whatsapp.com/send?text='+text, '_blank');
+      } else if(type==='copy'){
+        navigator.clipboard.writeText(url).then(()=>{
+          alert('Link undangan disalin ke clipboard');
+        }).catch(()=>{ alert('Gagal menyalin link — silakan salin secara manual: '+url)});
+      }
+    }
+
+    // Expose share to global for inline buttons
+    window.share = share;
+  </script>
+</body>
+</html>
