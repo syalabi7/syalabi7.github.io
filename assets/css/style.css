@@ -324,3 +324,29 @@ body{
     color:#eef1ff;
 }
 
+#musicBtn{
+    position:fixed;
+    bottom:16px;
+    right:16px;
+    width:28px;
+    height:28px;
+    background:rgba(255,255,255,.9);
+    color:#0a193c;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    cursor:pointer;
+    z-index:999;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+#musicBtn.rotate{
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}

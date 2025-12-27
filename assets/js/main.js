@@ -39,3 +39,25 @@ setInterval(function(){
     document.getElementById('seconds').innerText = Math.floor((diff % (1000*60)) / 1000);
 }, 1000);
 
+
+// ======= music controller =======
+const bgMusic = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+let musicPlaying = false;
+
+document.getElementById('openBtn').addEventListener('click', function(){
+    bgMusic.play();
+    musicPlaying = true;
+    musicBtn.classList.add('rotate');
+});
+
+musicBtn.addEventListener('click', function(){
+    if(musicPlaying){
+        bgMusic.pause();
+        musicBtn.classList.remove('rotate');
+    }else{
+        bgMusic.play();
+        musicBtn.classList.add('rotate');
+    }
+    musicPlaying = !musicPlaying;
+});
