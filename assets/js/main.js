@@ -99,3 +99,14 @@ function fallbackCopy(text){
     document.body.removeChild(input);
     alert("Nomor rekening berhasil disalin 📋");
 }
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity .6s ease";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 600);
+});
