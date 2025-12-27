@@ -724,3 +724,120 @@ body{
     color:#ffffff;
     text-shadow:0 3px 12px rgba(0,0,0,.8);
 }
+
+
+/* ===== OUR JOURNEY ===== */
+
+.journey h3{
+    letter-spacing:3px;
+    margin-bottom:30px;
+}
+
+.journey-item{
+    background:rgba(255,255,255,.10);
+    border-radius:20px;
+    padding:26px 22px;
+    margin-bottom:18px;
+    backdrop-filter: blur(6px);
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    position:relative;
+}
+
+.journey-year{
+    display:inline-block;
+    background:#e8ecff;
+    color:#0a193c;
+    padding:4px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.journey-item h4{
+    font-size:16px;
+    letter-spacing:1px;
+    margin:12px 0 8px;
+    color:#ffffff;
+}
+
+.journey-item p{
+    font-size:14px;
+    line-height:1.7;
+    color:#eef1ff;
+    text-shadow:0 2px 6px rgba(0,0,0,.6);
+}
+
+/* ===== OUR JOURNEY TIMELINE ===== */
+
+.timeline{
+    position:relative;
+    margin-top:30px;
+    padding-left:30px;
+}
+
+/* garis vertikal */
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:10px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(255,255,255,.5),
+        rgba(255,255,255,0)
+    );
+}
+
+.timeline-item{
+    position:relative;
+    display:flex;
+    align-items:flex-start;
+    margin-bottom:30px;
+}
+
+.timeline-dot{
+    width:14px;
+    height:14px;
+    background:#e8ecff;
+    border-radius:50%;
+    position:absolute;
+    left:3px;
+    top:8px;
+    box-shadow:0 0 0 4px rgba(232,236,255,.2);
+}
+
+.timeline-content{
+    background:rgba(255,255,255,.10);
+    border-radius:18px;
+    padding:20px 20px;
+    margin-left:20px;
+    width:100%;
+    backdrop-filter: blur(6px);
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+.timeline-content h4{
+    font-size:16px;
+    margin:10px 0 6px;
+    color:#fff;
+}
+
+.timeline-content p{
+    font-size:14px;
+    line-height:1.7;
+    color:#eef1ff;
+}
+
+.timeline-content .journey-year{
+    display:inline-block;
+    background:#e8ecff;
+    color:#0a193c;
+    padding:4px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
