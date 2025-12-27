@@ -58,14 +58,6 @@ setInterval(() => {
     document.getElementById('seconds').innerText = Math.floor((diff % (1000*60)) / 1000);
 }, 1000);
 
-// ===== COPY REKENING =====
-function copyRek(id){
-    const text = document.getElementById(id).innerText.replace(/\s/g,'');
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Nomor rekening berhasil disalin 📋");
-    });
-}
-
 // ===== GIFT TOGGLE =====
 const giftBtn  = document.getElementById('giftToggle');
 const giftCard = document.getElementById('giftCard');
@@ -82,18 +74,19 @@ if(giftBtn && giftCard){
 
 document.addEventListener("click", function(e){
     if(e.target.classList.contains("copy-btn")){
-        const id = e.target.dataset.target;
+        const id   = e.target.dataset.target;
         const text = document.getElementById(id).innerText.replace(/\s/g,'');
 
-        if(navigator.clipboard){
-            navigator.clipboard.writeText(text).then(()=>{
-                alert("Nomor rekening berhasil disalin 📋");
-            }).catch(()=>{
-                fallbackCopy(text);
-            });
-        }else{
-            fallbackCopy(text);
-        }
+        const input = document.createElement("input");
+        input.value = text;
+        document.body.appendChild(input);
+        input.select();
+        input.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(input);
+
+        e.target.innerText = "Tersalin ✓";
+        setTimeout(() => e.target.innerText = "Salin", 1500);
     }
 });
 

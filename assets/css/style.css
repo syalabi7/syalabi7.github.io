@@ -431,6 +431,7 @@ body{
         rgba(255,255,255,.15),
         rgba(255,255,255,0)
     );
+    pointer-events: none; /* ← INI WAJIB */
 }
 
 .atm-bank{
@@ -541,4 +542,72 @@ body{
 @keyframes fadeGift{
     from{ opacity:0; transform:translateY(12px); }
     to{ opacity:1; transform:translateY(0); }
+}
+
+/* ===== CLOSING SECTION ===== */
+
+.closing{
+    margin-top:60px;
+    background:rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:44px 30px;
+    backdrop-filter: blur(6px);
+    box-shadow:0 12px 36px rgba(0,0,0,.35);
+}
+
+.closing-text,
+.closing-doa{
+    font-size:15px;
+    line-height:1.9;
+    color:#eef1ff;
+    margin-bottom:18px;
+    text-shadow:0 3px 10px rgba(0,0,0,.7);
+}
+
+.closing-wassalam{
+    font-size:16px;
+    margin-top:26px;
+    margin-bottom:12px;
+    letter-spacing:1px;
+    color:#ffffff;
+    text-shadow:0 3px 10px rgba(0,0,0,.7);
+}
+
+.closing-name{
+    font-family:'Great Vibes', cursive;
+    font-size:36px;
+    color:#ffffff;
+    letter-spacing:2px;
+    text-shadow:0 4px 14px rgba(0,0,0,.7);
+}
+
+
+/* ===== SECTION DIVIDER ===== */
+
+.section{
+    position:relative;
+}
+
+.section::after{
+    content:'';
+    display:block;
+    width:80%;
+    height:1px;
+    margin:50px auto 0;
+    background:linear-gradient(to right,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+}
+
+.section.closing::after{
+    display:none;
+}
+
+@media(max-width:480px){
+    .section::after{
+        width:70%;
+        margin-top:40px;
+    }
 }
