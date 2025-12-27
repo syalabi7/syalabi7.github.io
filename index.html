@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<audio id="bgMusic" loop>
+<audio id="bgMusic" loop playsinline>
     <source src="assets/music/wedding.mp3" type="audio/mpeg">
 </audio>
 
@@ -18,23 +18,20 @@
 <!-- COVER -->
 <section class="cover" id="cover">
     <div class="cover-inner">
-        <div class="cover-inner">
-            <p class="wedding-of">The Wedding of</p>
-            <h1>Ayuna & Syalabi</h1>
+        <p class="wedding-of">The Wedding of</p>
+        <h1>Ayuna & Syalabi</h1>
 
-            <div class="guest-wrapper">
-                <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-                <p id="guestName" class="guest-name">Tamu Undangan</p>
-            </div>
-
-            <button id="openBtn">Buka Undangan</button>
+        <div class="guest-wrapper">
+            <p class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <p id="guestName" class="guest-name">Tamu Undangan</p>
         </div>
+
+        <button id="openBtn">Buka Undangan</button>
     </div>
 </section>
 
 <section class="content" id="content">
     
-
     <div class="section opening">
         <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
         <p>
@@ -122,6 +119,38 @@
         </div>
 
         <div id="gb-list"></div>
+    </div>
+
+    <div class="section gift">
+        <h3>Amplop Digital</h3>
+
+        <button id="giftToggle" class="gift-toggle">
+            Buka Amplop Digital 💌
+        </button>
+
+        <div class="gift-card" id="giftCard" style="display:none">
+
+            <div class="atm-card bsi">
+                <div class="atm-top">
+                    <div class="atm-chip"></div>
+                    <div class="atm-bank">BSI</div>
+                </div>
+                <div class="atm-number" id="rek1">7312 2608 61</div>
+                <div class="atm-name">Ayuna Widya Silviana Sari</div>
+                <button class="copy-btn" data-target="rek1">Salin</button>
+            </div>
+
+            <div class="atm-card bri">
+                <div class="atm-top">
+                    <div class="atm-chip"></div>
+                    <div class="atm-bank">BRI</div>
+                </div>
+                <div class="atm-number" id="rek2">2050 0100 2060 530</div>
+                <div class="atm-name">Ahmad Syalabi Mahmud</div>
+                <button class="copy-btn" data-target="rek2">Salin</button>
+            </div>
+
+        </div>
     </div>
 
 </section>
