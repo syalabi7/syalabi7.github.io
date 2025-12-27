@@ -324,6 +324,15 @@ body{
     color:#eef1ff;
 }
 
+.guestbook-item{
+    animation: fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform:translateY(6px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
 #musicBtn{
     position:fixed;
     bottom:16px;
