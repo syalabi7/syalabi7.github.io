@@ -1019,3 +1019,50 @@ body{
         transform:translateY(0);
     }
 }
+
+body{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17.5px;
+    line-height: 1.85;
+}
+
+.section h2{
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
+.section h3{
+    font-size: 24px;
+    letter-spacing: 2.5px;
+    margin-bottom: 34px;
+}
+
+.section p{
+    font-size: 16.5px;
+}
+
+.timeline-content h4,
+.event-card h4{
+    font-size: 18px;
+}
+
+.timeline-content p,
+.event-card p{
+    font-size: 16px;
+}
+
+.countdown-box span{
+    font-size: 26px;
+}
+
+.countdown-box small{
+    font-size: 12px;
+}
+
+.guestbook-item strong{
+    font-size: 15px;
+}
+
+.guestbook-item p{
+    font-size: 15px;
+}
