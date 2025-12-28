@@ -30,6 +30,10 @@ if(openBtn){
         setTimeout(() => {
             document.getElementById('content').scrollIntoView({behavior:'smooth'});
         }, 900);
+
+        setTimeout(()=>{
+            document.querySelector(".opening").classList.add("show");
+        },700);
     });
 }
 
@@ -161,3 +165,88 @@ Wassalamualaikum Warahmatullahi Wabarakatuh`;
 }
 
 });
+
+document.addEventListener("DOMContentLoaded", ()=>{
+
+/* ====== SECTION FADE ENGINE ====== */
+const sections = document.querySelectorAll(".section");
+
+const sectionObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            sectionObserver.unobserve(entry.target);
+        }
+    });
+},{
+    threshold:0.25,
+    rootMargin:"0px 0px -80px 0px"
+});
+
+sections.forEach(sec => sectionObserver.observe(sec));
+
+
+
+/* ====== OPENING STAGGER ====== */
+const opening = document.querySelector(".opening");
+
+const openingObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            openingObserver.unobserve(entry.target);
+        }
+    });
+},{ threshold:0.4 });
+
+if(opening) openingObserver.observe(opening);
+
+
+
+/* ====== COUPLE PERSON FADE ====== */
+const coupleItems = document.querySelectorAll(".fade-left, .fade-right, .fade-zoom");
+
+const coupleObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            coupleObserver.unobserve(entry.target);
+        }
+    });
+},{ threshold:0.6 });
+
+coupleItems.forEach(el => coupleObserver.observe(el));
+
+});
+
+/* ===== TIMELINE STAGGER FADE ===== */
+const timelineItems = document.querySelectorAll(".timeline-item");
+
+const timelineObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            timelineObserver.unobserve(entry.target);
+        }
+    });
+},{
+    threshold:0.4
+});
+
+timelineItems.forEach(item => timelineObserver.observe(item));
+
+/* ===== EVENT CARD STAGGER FADE ===== */
+const eventCards = document.querySelectorAll(".event-card");
+
+const eventObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            eventObserver.unobserve(entry.target);
+        }
+    });
+},{
+    threshold:0.35
+});
+
+eventCards.forEach(card => eventObserver.observe(card));

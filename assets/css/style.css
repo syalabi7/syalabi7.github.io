@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap');
+
+/* body{
+    margin:0;
+    font-family: 'Playfair Display', serif;
+    overflow:hidden;
+    background:#000;
+} */
 
 body{
     margin:0;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     overflow:hidden;
     background:#000;
 }
@@ -336,6 +344,19 @@ body{
 
 #gb-list{
     margin-top:20px;
+    max-height:320px;
+    overflow-y:auto;
+    padding-right:6px;
+    margin-top:20px;
+}
+
+/* scrollbar halus */
+#gb-list::-webkit-scrollbar{
+    width:4px;
+}
+#gb-list::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.4);
+    border-radius:10px;
 }
 
 .guestbook-item{
@@ -840,4 +861,161 @@ body{
     border-radius:20px;
     font-size:12px;
     font-weight:600;
+}
+
+.atm-bank-logo{
+    height:26px;
+    max-width:90px;
+    object-fit:contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+}
+
+.section{
+    opacity:0;
+    transform:translateY(45px);
+    transition:
+        opacity 1.6s ease,
+        transform 1.6s cubic-bezier(.25,.8,.25,1);
+}
+
+.section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.section.opening{
+    transition-delay:.3s;
+}
+
+.opening > *{
+    opacity:0;
+    transform:translateY(25px);
+    transition:
+        opacity 1.4s ease,
+        transform 1.4s cubic-bezier(.25,.8,.25,1);
+}
+.opening.show > *{
+    opacity:1;
+    transform:translateY(0);
+}
+.opening.show > *:nth-child(1){ transition-delay:.2s; }
+.opening.show > *:nth-child(2){ transition-delay:.5s; }
+.opening.show > *:nth-child(3){ transition-delay:.8s; }
+
+.fade-left, .fade-right, .fade-zoom{
+    opacity:0;
+    transition:all 1.2s cubic-bezier(.22,.61,.36,1);
+}
+
+.fade-left{
+    transform:translateX(-40px);
+}
+
+.fade-right{
+    transform:translateX(40px);
+}
+
+.fade-zoom{
+    transform:scale(.7);
+}
+
+.fade-left.show,
+.fade-right.show,
+.fade-zoom.show{
+    opacity:1;
+    transform:translate(0) scale(1);
+}
+
+
+.section.show:nth-child(1){ transition-delay:.1s; }
+.section.show:nth-child(2){ transition-delay:.25s; }
+.section.show:nth-child(3){ transition-delay:.4s; }
+.section.show:nth-child(4){ transition-delay:.55s; }
+.section.show:nth-child(5){ transition-delay:.7s; }
+.section.show:nth-child(6){ transition-delay:.85s; }
+
+/* ===== TIMELINE FADE ===== */
+.timeline-item{
+    opacity:0;
+    transform:translateY(40px);
+    transition:
+        opacity 1.4s ease,
+        transform 1.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.timeline-item.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* delay bertahap */
+.timeline-item.show:nth-child(1){ transition-delay:.2s; }
+.timeline-item.show:nth-child(2){ transition-delay:.45s; }
+.timeline-item.show:nth-child(3){ transition-delay:.7s; }
+.timeline-item.show:nth-child(4){ transition-delay:.95s; }
+
+/* ===== EVENT CARD STAGGER FADE ===== */
+.event-card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:
+        opacity 1.4s ease,
+        transform 1.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.event-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* delay bertahap */
+.event-card.show:nth-of-type(1){ transition-delay:.2s; }
+.event-card.show:nth-of-type(2){ transition-delay:.45s; }
+.event-card.show:nth-of-type(3){ transition-delay:.7s; }
+
+
+.section,
+.section p,
+.section h2,
+.section h3,
+.section h4,
+.section span,
+.section small,
+.event-card,
+.timeline-content,
+.journey-year,
+.countdown-date,
+.guestbook-item,
+.map-btn,
+.gift-toggle{
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: .4px;
+}
+
+.cover-inner h1,
+.person h4,
+.closing-name{
+    font-family: 'Great Vibes', cursive !important;
+    letter-spacing: 2px;
+}
+
+
+.ayat-section{
+    padding-top:80px;
+    padding-bottom:80px;
+}
+
+.ayat-section .ayat-wrapper{
+    animation: fadeAyat 2s ease;
+}
+
+@keyframes fadeAyat{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }

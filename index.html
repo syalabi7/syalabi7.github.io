@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500&family=Great+Vibes&family=Scheherazade+New&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -38,8 +40,7 @@
 </section>
 
 <section class="content" id="content">
-    
-    <div class="section opening">
+    <div class="section ayat-section">
         <div class="ayat-wrapper">
             <p class="ayat-bismillah">
                 بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
@@ -56,7 +57,9 @@
                 <br><em>(QS. Ar-Rum : 21)</em>
             </p>
         </div>
-
+    </div>
+    
+    <div class="section opening">
         <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
         <p>
             Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
@@ -66,15 +69,15 @@
     </div>
 
     <div class="section couple">
-        <div class="person">
+        <div class="person fade-left">
             <img src="assets/img/ayuna.jpg" class="photo">
             <h4>Ayuna Widya Silviana Sari</h4>
             <p>Putri dari Bapak Yaji & <br>Ibu Wiji</p>
         </div>
 
-        <span class="and">&amp;</span>
+        <span class="and fade-zoom">&amp;</span>
 
-        <div class="person">
+        <div class="person fade-right">
             <img src="assets/img/syalabi.jpg" class="photo">
             <h4>Ahmad Syalabi Mahmud</h4>
             <p>Putra dari Bapak H.M. Nur Syahid (Alm.) & <br>Ibu Makhinunik (Almh.)</p>
@@ -83,9 +86,7 @@
 
     <div class="section journey">
         <h3>Our Journey</h3>
-
         <div class="timeline">
-
             <div class="timeline-item">
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -97,7 +98,6 @@
                     </p>
                 </div>
             </div>
-
             <div class="timeline-item">
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -109,7 +109,6 @@
                     </p>
                 </div>
             </div>
-
             <div class="timeline-item">
                 <span class="timeline-dot"></span>
                 <div class="timeline-content">
@@ -122,7 +121,6 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -199,7 +197,7 @@
             <div class="atm-card bsi">
                 <div class="atm-top">
                     <div class="atm-chip"></div>
-                    <div class="atm-bank">BSI</div>
+                    <img src="assets/img/logo-bsi.png" class="atm-bank-logo" alt="BSI">
                 </div>
                 <div class="atm-number" id="rek1">7312 2608 61</div>
                 <div class="atm-name">Ayuna Widya Silviana Sari</div>
@@ -208,7 +206,7 @@
             <div class="atm-card bri">
                 <div class="atm-top">
                     <div class="atm-chip"></div>
-                    <div class="atm-bank">BRI</div>
+                    <img src="assets/img/logo-bri.png" class="atm-bank-logo" alt="BRI">
                 </div>
                 <div class="atm-number" id="rek2">2050 0100 2060 530</div>
                 <div class="atm-name">Ahmad Syalabi Mahmud</div>
@@ -286,8 +284,7 @@ async function loadGuestbook(){
     const { data, error } = await sb
       .from('guestbook')
       .select('*')
-      .order('created_at', { ascending: false })
-      .limit(10);
+      .order('created_at', { ascending: false });
 
     if(error){
         console.log(error);
