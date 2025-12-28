@@ -975,7 +975,7 @@ body{
 
 
 .section,
-.section p,
+.section p:not(.ayat-arab):not(.ayat-bismillah):not(.ayat-arti),
 .section h2,
 .section h3,
 .section h4,
@@ -1065,4 +1065,19 @@ body{
 
 .guestbook-item p{
     font-size: 15px;
+}
+
+.ayat-arab,
+.ayat-bismillah{
+    font-family: 'Scheherazade New', serif !important;
+    letter-spacing: 0 !important;
+}
+
+.ayat-arab{
+    font-size: 28px !important;
+    line-height: 2.4;
+}
+
+.ayat-bismillah{
+    font-size: 34px !important;
 }
