@@ -129,13 +129,15 @@ if(admin === ADMIN_KEY){
         const link = `${location.origin}${location.pathname}?to=${encodeURIComponent(nm)}`;
 
         lastText = 
-`Yth. ${nm}
+`Yth. *${nm}*
 
 Assalamualaikum Warahmatullahi Wabarakatuh
 
 Dengan memohon Rahmat dan Ridho Allah SWT, dan tanpa mengurangi rasa hormat melalui pesan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami :
 
-Ayuna Widya Silviana Sari dan Ahmad Syalabi Mahmud
+*Ayuna Widya Silviana Sari* 
+&
+*Ahmad Syalabi Mahmud*
 
 Berikut link undangan kami, untuk info lengkap dari acara bisa kunjungi :
 ${link}
@@ -145,7 +147,9 @@ Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
 Mohon maaf perihal undangan hanya dibagikan melalui pesan ini.
 
 Terima kasih banyak atas perhatiannya.
-Wassalamualaikum Warahmatullahi Wabarakatuh`;
+Wassalamualaikum Warahmatullahi Wabarakatuh
+
+*Ayuna & Syalabi*`;
 
         result.innerHTML = `<pre style="white-space:pre-wrap">${lastText}</pre>`;
         copyBtn.style.display = "inline-block";
