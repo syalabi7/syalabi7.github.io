@@ -154,7 +154,7 @@ Wassalamualaikum Warahmatullahi Wabarakatuh`;
     copyBtn.addEventListener("click", ()=>{
         navigator.clipboard.writeText(lastText).then(()=>{
             copyBtn.innerText = "Tersalin ✓";
-            setTimeout(()=> copyBtn.innerText = "Salin Link",1500);
+            setTimeout(()=> copyBtn.innerText = "Salin Pesan",1500);
         });
     });
 
